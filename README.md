@@ -1,65 +1,95 @@
-📓 Table of Contents
+<div align="center">
+  <h1>Online Exam Portal</h1>
+  <p>
+    A full-featured online examination portal with a Node.js backend and a React.js frontend.
+  </p>
+</div>
 
-About the Project
+---
 
-Tech Stack
+# 📓 Table of Contents
 
-Features
+* [About the Project](#star2-about-the-project)
 
-Environment Variables
+  * [Tech Stack](#space_invader-tech-stack)
+  * [Features](#dart-features)
+  * [Environment Variables](#key-environment-variables)
+* [Getting Started](#toolbox-getting-started)
 
-Getting Started
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Run Locally](#running-run-locally)
+  * [Run with Docker](#run-with-docker)
+* [To-do](#notes-to-do)
+* [Contributing](#wave-contributing)
+* [License](#warning-license)
+* [Contact](#handshake-contact)
+* [Acknowledgements](#gem-acknowledgements)
 
-Prerequisites
+---
 
-Run Locally
-
-Run with Docker
-
-To-do
-
-Contributing
-
-License
-
-Contact
-
-Acknowledgements
-
-⭐ About the Project
+## ⭐ About the Project
 
 A web application for conducting online multiple-choice tests (MCQs) for students, teachers, and admins.
 
-👾 Tech Stack
+---
 
-🎯 Features
+### 👾 Tech Stack
 
-Student User
+<details>
+  <summary>Frontend</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://react-redux.js.org/">React-Redux</a></li>
+    <li><a href="https://mui.com/">Material UI</a></li>
+    <li>HTML5</li>
+    <li>CSS3</li>
+  </ul>
+</details>
 
-View available tests
+<details>
+  <summary>Backend</summary>
+  <ul>
+    <li><a href="https://nodejs.org/">Node.js</a></li>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://www.passportjs.org/">Passport.js</a></li>
+  </ul>
+</details>
 
-Register for tests
+<details>
+  <summary>Database</summary>
+  <ul>
+    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+  </ul>
+</details>
 
-Attempt tests
+---
 
-View results with explanations
+### 🎯 Features
 
-Teacher User
+#### Student User
 
-Create and update questions
+* View available tests
+* Register for tests
+* Attempt tests
+* View results with explanations
 
-Create and manage tests
+#### Teacher User
 
-Admin User
+* Create and update questions
+* Create and manage tests
 
-Create and manage teacher accounts
+#### Admin User
 
-Manage subjects and categories
+* Create and manage teacher accounts
+* Manage subjects and categories
 
-🔑 Environment Variables
+---
 
-To run this project, create a backend/config.json file with:
+### 🔑 Environment Variables
 
+To run this project, create a `backend/config.json` file with:
+
+```json
 {
   "mongodb": {
     "connectionString": "<your_mongo_uri>"
@@ -68,68 +98,93 @@ To run this project, create a backend/config.json file with:
     "secret": "<your_jwt_secret>"
   }
 }
+```
 
-🛠️ Getting Started
+---
 
-‼️ Prerequisites
+## 🛠️ Getting Started
 
-Node.js and npm
+### ‼️ Prerequisites
 
-MongoDB (local or cloud)
+* Node.js and npm
+* MongoDB (local or cloud)
 
-🏃‍♂️ Run Locally
+---
 
+### 🏃‍♂️ Run Locally
+
+```bash
 git clone https://github.com/chintan-golakiya/online-exam-portal.git
 cd online-exam-portal
+```
 
 Install dependencies:
 
+```bash
 cd backend && npm install
 cd ../frontend && npm install
 cd ../user-portal-frontend && npm install
+```
 
 Start each service:
 
+```bash
 cd backend && npm start
 cd ../frontend && npm start
 cd ../user-portal-frontend && npm start
+```
 
-Default admin user is created on the first run.
-Username: sysadmin, Password: systemadmin
-Logic inside addAdminIfNotFound() in backend/services/admin.js
+> Default admin user is created on the first run.
+> Username: `sysadmin`, Password: `systemadmin`
+> Logic inside `addAdminIfNotFound()` in `backend/services/admin.js`
 
-🚢 Run With Docker
+---
 
+### 🚢 Run With Docker
+
+```bash
 docker-compose build
 docker-compose up
+```
 
 Access services:
 
-Backend: http://localhost:5000/
+* Backend: `http://localhost:5000/`
+* Admin Frontend: `http://localhost:3100/`
+* Student/Teacher Frontend: `http://localhost:3200/`
 
-Admin Frontend: http://localhost:3100/
+---
 
-Student/Teacher Frontend: http://localhost:3200/
+## 📄 To-do
 
-📄 To-do
+* [ ] Add more test types
+* [ ] Integrate email notifications
+* [ ] Add analytics dashboard
 
+---
 
-
-👋 Contributing
+## 👋 Contributing
 
 Contributions are welcome!
 
+```bash
 Fork -> Clone -> Create Branch -> Commit Changes -> Open Pull Request
+```
 
-⚠️ License
+<a href="https://github.com/chintan-golakiya/online-exam-portal/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=chintan-golakiya/online-exam-portal" />
+</a>
+
+---
+
+## ⚠️ License
 
 This project is currently not under any license.
 
-💫 Acknowledgements
+---
 
-Material UI
+## 💫 Acknowledgements
 
-Passport.js
-
-Awesome Readme Template
-
+* [Material UI](https://mui.com)
+* [Passport.js](https://www.passportjs.org/)
+* [Awesome Readme Template](https://github.com/Louis3797/awesome-readme-template)
