@@ -1,211 +1,135 @@
-<!--
-Hey, thanks for using the awesome-readme-template template.  
-If you have any enhancements, then fork this project and create a pull request 
-or just open an issue with the label "enhancement".
-Don't forget to give this project a star for additional support ;)
-Maybe you can mention me or this repo in the acknowledgements too
--->
-<div align="center">
-  <h1>Online Exam Portal</h1>
-  <p>
-    A Online Exam portal website with backend in Nodejs and frontend in React js 
-  </p>
-  
+📓 Table of Contents
 
-<!-- Table of Contents -->
-# :notebook_with_decorative_cover: Table of Contents
+About the Project
 
-- [About the Project](#star2-about-the-project)
-  * [Tech Stack](#space_invader-tech-stack)
-  * [Features](#dart-features)
-  * [Environment Variables](#key-environment-variables)
-- [Getting Started](#toolbox-getting-started)
-  * [Prerequisites](#bangbang-prerequisites)
-  * [Run Locally](#running-run-locally)
-  * [Run with Docker](#run-with-docker)
-- [To-do](#notes-to-do)
-- [Contributing](#wave-contributing)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
+Tech Stack
 
-  
+Features
 
-<!-- About the Project -->
-## :star2: About the Project
-  Web Application for online MCQ test usecase
+Environment Variables
 
+Getting Started
 
-<!-- TechStack -->
-### :space_invader: Tech Stack
+Prerequisites
 
-<details>
-  <summary>Frontend</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://react-redux.js.org/">React-Redux</a></li>
-    <li><a href="https://www.mui.com">Material UI library</a></li>
-    <li><a href="https://html.com/html5/">HTML 5</a></li>
-    <li><a href="https://www.css3.com/">CSS 3</a></li>
-  </ul>
-</details>
+Run Locally
 
-<details>
-  <summary>Backend</summary>
-  <ul>
-    <li><a href="https://www.nodejs.org">Node.js</a></li>
-    <li><a href="https://www.expressjs.com/">Express.js</a></li>
-    <li><a href="https://www.passportjs.org/">Passport.js</a></li>
-  </ul>
-</details>
+Run with Docker
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
+To-do
 
+Contributing
 
-<!-- Features -->
-### :dart: Features
+License
 
-- Student User
-  - View Tests Details
-  - Register for test
-  - Give Test
-  - Check Result and correct answer and explanation for questions
-- Teacher User
-  - Create, Update Questions and Question Banks
-  - Create, View Test
-- Admin User
-  - Create and Manage Teacher users
-  - Create and Manage subjects
+Contact
 
+Acknowledgements
 
-<!-- Env Variables -->
-### :key: Environment Variables
+⭐ About the Project
 
-To run this project, you will need to add the following variables to your backend/config.json file
+A web application for conducting online multiple-choice tests (MCQs) for students, teachers, and admins.
 
-`mongodb.connectionString`
-`jwt.secret`
+👾 Tech Stack
 
-<!-- Getting Started -->
-## 	:toolbox: Getting Started
+🎯 Features
 
-<!-- Prerequisites -->
-### :bangbang: Prerequisites
+Student User
 
-This project uses MongoDB as database. please install mongodb server in local environment.
+View available tests
 
-<!-- Run Locally -->
-### :running: Run Locally
+Register for tests
 
-Clone the project
+Attempt tests
 
-```bash
-  git clone https://github.com/chintan-golakiya/online-exam-portal.git
-```
+View results with explanations
 
-Go to the project directory
+Teacher User
 
-```bash
-  cd project-directory
-```
+Create and update questions
 
-Install dependencies
+Create and manage tests
 
-```bash
-  cd backend
-  npm install
-  cd ../frontend
-  npm install
-  cd ../user-portal-frontend
-  npm install
-```
+Admin User
 
-Start the backend server
+Create and manage teacher accounts
 
-```bash
-  cd backend
-  npm start
-```
+Manage subjects and categories
 
-Start the frontend client for admin
+🔑 Environment Variables
 
-```bash
-  cd frontend
-  npm start
-```
+To run this project, create a backend/config.json file with:
 
-Start the frontend client for teacher/student
+{
+  "mongodb": {
+    "connectionString": "<your_mongo_uri>"
+  },
+  "jwt": {
+    "secret": "<your_jwt_secret>"
+  }
+}
 
-```bash
-  cd user-portal-frontend
-  npm start
-```
+🛠️ Getting Started
 
-<b>Note</b> : admin user is created when backend runs first time. default admin (username, password) details are <b>("sysadmin","systemadmin"). addAdminIfNotFound() function of backend/services/admin.js file </b> is for this logic. You can check/modify default admin details from this function.
+‼️ Prerequisites
 
-<!-- Run with Docker -->
-### Run With Docker
+Node.js and npm
 
-build docker images
+MongoDB (local or cloud)
 
-```bash
-  docker-compose build
-```
+🏃‍♂️ Run Locally
 
-Run container and services
+git clone https://github.com/chintan-golakiya/online-exam-portal.git
+cd online-exam-portal
 
-```bash
-  docker-compose up
-```
+Install dependencies:
 
-Use following paths 
+cd backend && npm install
+cd ../frontend && npm install
+cd ../user-portal-frontend && npm install
 
-```bash
-  Backend server : localhost:5000/
-  Admin Frontend : localhost:3100/
-  User  Frontend : localhost:3200/
-```
+Start each service:
 
-<!-- To Do -->
-## :notes: to-do
-  <ul>
-  <li> add more features </li>
-  </ul>
- 
-<!-- Contributing -->
-## :wave: Contributing
+cd backend && npm start
+cd ../frontend && npm start
+cd ../user-portal-frontend && npm start
 
-<a href="https://github.com/chintan-golakiya/online-exam-portal/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=chintan-golakiya/online-exam-portal" />
-</a>
+Default admin user is created on the first run.
+Username: sysadmin, Password: systemadmin
+Logic inside addAdminIfNotFound() in backend/services/admin.js
 
+🚢 Run With Docker
 
-Contributions are always welcome!
+docker-compose build
+docker-compose up
 
-See `contributing.md` for ways to get started.
+Access services:
+
+Backend: http://localhost:5000/
+
+Admin Frontend: http://localhost:3100/
+
+Student/Teacher Frontend: http://localhost:3200/
+
+📄 To-do
 
 
 
+👋 Contributing
 
-<!-- License -->
-## :warning: License
+Contributions are welcome!
 
-Distributed under the no License. 
+Fork -> Clone -> Create Branch -> Commit Changes -> Open Pull Request
 
+⚠️ License
 
+This project is currently not under any license.
 
+💫 Acknowledgements
 
+Material UI
 
-<!-- Acknowledgments -->
-## :gem: Acknowledgements
-Following libraries have been used in this projects.
+Passport.js
 
- - [Material UI](https://www.mui.com)
- - [Passport JS](https://www.passportjs.org/)
- - [Awesome Readme Template](https://github.com/Louis3797/awesome-readme-template)
+Awesome Readme Template
 
